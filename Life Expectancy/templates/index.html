@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Life Expectancy</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+    </head>
+<body style="background: #ED213A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+
+
+  <!-- Text Area -->
+    	<div class="ml-container">
+            <h1 style="color:white">Life Expectancy</h1> <hr style="border: 1px solid black;">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+                <input class="form-input" type="text" name="adultmortality" placeholder="Adult Mortality"><br>
+
+                <input class="form-input" type="text" name="infantdeaths" placeholder="infant deaths"><br>
+
+                <input class="form-input" type="text" name="Alcohol" placeholder="Alcohol"><br>
+
+                <input class="form-input" type="text" name="HepatitisB" placeholder="   Hepatitis B"><br>
+
+                <input class="form-input" type="text" name="Measles" placeholder="Measles"><br>
+
+                <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+
+                <input class="form-input" type="text" name="under-five-deaths" placeholder="under-five deaths"><br>
+
+                <input class="form-input" type="text" name="Polio" placeholder="Polio"><br>
+
+                <input class="form-input" type="text" name="Diphtheria" placeholder="Diphtheria"><br>
+
+                <input class="form-input" type="text" name="HIV/AIDS" placeholder="HIV/AIDS"><br>
+
+                <input class="form-input" type="text" name="thinness 1-19 years" placeholder="thinness 1-19 years"><br>
+
+             
+
+                 <input class="form-input" type="text" name="icr" placeholder="Income composition of resources"><br>
+
+
+                  <input class="form-input" type="text" name="Schooling" placeholder="Schooling"><br>
+
+
+
+        		<input type="submit" style="padding: 20px;background: black;color: white;width: 10%;size: 50px" value="Predict">
+        	</form>
+<hr style="border: 1px solid black;">
+            <h2>Your Life Expectancy Is : {{ prediction }} </h2>
+
+            <div>
+                <p style="color: white"> © copy right By RITU  2020 Powerd By Technocolab</p>
+            </div>
+
+    	</div>
+
+</body>
+</html>
